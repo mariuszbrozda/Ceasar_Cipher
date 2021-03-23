@@ -1,8 +1,11 @@
 from art import logo
+
+# Alphabet var is list of alphabet letters to use in program
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
             'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-# Ceasar function used for shifting letters in alphabet left or right, depends on direction
+# Ceasar function used for encryption and decryption (shifting letters in alphabet left or right, depends on direction.)
+# it's looping through start text and moving each letter by shift number left or right 
 def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
   if cipher_direction == "decode":
@@ -19,6 +22,8 @@ def caesar(start_text, shift_amount, cipher_direction):
 print(logo)
 
 should_end = False
+
+# while loop used to stop programm if should_end var becomes True( When user types 'no' to prompt message)
 while not should_end:
 
   direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
